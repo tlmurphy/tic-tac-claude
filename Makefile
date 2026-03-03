@@ -16,4 +16,4 @@ run: build
 
 ## clean: remove compiled outputs
 clean:
-	rm -rf dist $(BINARY)
+	rm -rf dist $(BINARY) frontend/node_modules
