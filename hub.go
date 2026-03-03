@@ -182,8 +182,8 @@ func (h *Hub) broadcastLocked(msg any) {
 // broadcastGameState builds and broadcasts the current game_state. Caller must hold h.mu.
 func (h *Hub) broadcastGameState() {
 	var boardStrings [3][3]string
-	for r := 0; r < 3; r++ {
-		for c := 0; c < 3; c++ {
+	for r := range 3 {
+		for c := range 3 {
 			boardStrings[r][c] = string(h.game.Board[r][c])
 		}
 	}
